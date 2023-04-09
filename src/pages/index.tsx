@@ -12,7 +12,7 @@ const Component2 = () => {
 
   return (
     <div>
-      <p>Component1</p>
+      <p>Component2</p>
       <ul>
         {data?.allPlanets?.planets?.map((p) => (
           <li key={p?.id}>
@@ -32,7 +32,7 @@ const Component2 = () => {
 const Component1 = () => {
   return (
     <div>
-      <p>Component2</p>
+      <p>Component1</p>
       <Component2 />
     </div>
   );

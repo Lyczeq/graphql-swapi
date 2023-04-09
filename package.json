@@ -5,6 +5,7 @@
   "scripts": {
     "predev": "pnpm run codegen",
     "dev": "next dev",
+    "prebuild": "pnpm run codegen",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
