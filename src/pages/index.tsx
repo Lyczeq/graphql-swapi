@@ -70,13 +70,14 @@ export default function Home() {
 export const getServerSideProps = async () => {
   const apolloClient = initializeApollo();
 
-  await apolloClient.query({
-    query: FilmsDocument,
-  });
-
-  await apolloClient.query({
-    query: PlanetsDocument,
-  });
+  await Promise.all([
+    apolloClient.query({
+      query: FilmsDocument,
+    }),
+    apolloClient.query({
+      query: PlanetsDocument,
+    }),
+  ]);
 
   return addApolloState(apolloClient, {
     props: {},
